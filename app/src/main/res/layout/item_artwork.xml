@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/artworkTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:backgroundTint="#4A4A4A"
+        android:layout_marginEnd="8dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/likeButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:icon="@android:drawable/star_off"
+        app:iconTint="@android:color/white"
+        app:backgroundTint="#4A4A4A"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:padding="0dp"/>
+
+</LinearLayout>

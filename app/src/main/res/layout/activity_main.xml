@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Layer 1: Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/starry_night"
+        android:scaleType="centerCrop"/>
+
+    <!-- Layer 2: Semi-transparent Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/semi_transparent_overlay"/>
+
+    <!-- Layer 3: Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Profile Image (Top 50%) -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/vangogh_profile"
+            android:scaleType="centerCrop"
+            android:contentDescription="Van Gogh portrait"/>
+
+        <!-- Scrollable Content (Bottom 50%) -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <!-- Artist Name -->
+                <TextView
+                    android:id="@+id/artistName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vincent Van Gogh"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:textColor="@color/white"/>
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/artistDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/van_gogh_description"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="16sp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="@color/white"/>
+
+                <!-- View Favorites Button -->
+                <Button
+                    android:id="@+id/viewFavoritesButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View Favorites"
+                    android:layout_margin="16dp"/>
+
+                <!-- Artworks Header -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Famous Works"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingStart="16dp"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/white"/>
+
+                <!-- Artworks List -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/artworksRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

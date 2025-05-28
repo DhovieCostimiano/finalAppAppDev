@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Required for app name -->
+    <string name="app_name">Van Gogh App</string>
+
+    <!-- For your description text -->
+    <string name="van_gogh_description">Vincent Willem van Gogh (1853–1890) was a Dutch Post-Impressionist painter who posthumously became one of the most famous and influential figures in Western art history.</string>
+
+    <!-- For any button texts -->
+    <string name="discover_button">Discover</string>
+</resources>
